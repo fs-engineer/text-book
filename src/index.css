@@ -1,4 +1,5 @@
-@import-normalize; /* bring in normalize.css styles */
+/*noinspection CssInvalidAtRule*/
+@import-normalize;
 
 body {
   margin: 0;
