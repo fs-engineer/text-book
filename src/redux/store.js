@@ -1,3 +1,5 @@
+import {devToolsEnhancer} from "@redux-devtools/extension";
+
 const { createStore } = require("redux");
 
 const initialState = {
@@ -17,6 +19,8 @@ const rootReducer = (state = initialState) => {
   return state;
 };
 
-const store = createStore(rootReducer);
+const enhancer = devToolsEnhancer();
+
+const store = createStore(rootReducer,enhancer);
 
 export default store;
