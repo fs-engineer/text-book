@@ -6,6 +6,7 @@ import { getFilterStatus } from '../../redux/selectors';
 
 export const StatusFilter = () => {
   const filter = useSelector(getFilterStatus);
+  console.log(filter);
 
   return (
     <div className={css.wrapper}>
