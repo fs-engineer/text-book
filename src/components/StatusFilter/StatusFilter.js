@@ -3,7 +3,7 @@ import css from './StatusFilter.module.css';
 import { statusFilters } from '../../redux/constants';
 import { useDispatch, useSelector } from 'react-redux';
 import { getFilterStatus } from '../../redux/selectors';
-import { setFilterStatus } from '../../redux/actions';
+import { setFilterStatus } from '../../redux/filtersSlice';
 
 export const StatusFilter = () => {
   const filter = useSelector(getFilterStatus);
