@@ -1,24 +1,16 @@
+import { createAction } from '@reduxjs/toolkit';
 import { nanoid } from 'nanoid';
 
-export const addTask = text => {
-  return {
-    type: 'tasks/addTask',
-    payload: {
-      id: nanoid(),
-      text,
-      completed: false,
-    },
-  };
-};
+export const addTask = createAction('tasks/addTask', text => ({
+  payload: {
+    id: nanoid(),
+    text,
+    completed: false,
+  },
+}));
 
-export const deleteTask = taskId => {
-  return { type: 'tasks/deleteTask', payload: taskId };
-};
+export const deleteTask = createAction('tasks/deleteTask');
 
-export const toggleCompleted = taskId => {
-  return { type: 'tasks/toggleCompleted', payload: taskId };
-};
+export const toggleCompleted = createAction('tasks/toggleCompleted');
 
-export const setFilterStatus = value => {
-  return { type: 'filters/setStatusFilter', payload: value };
-};
+export const setFilterStatus = createAction('filters/setStatusFilter');
